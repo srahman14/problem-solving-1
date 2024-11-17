@@ -5,9 +5,9 @@
 # Three fruits: Apple, Orange and Grape are mixed in three different containers to produce juice blends
 # The total volume of each container is known -> Task is to determine the volumes of Apple, Orange, Grape
 
-# The first container contains 3 parts of Apple juice, 2 parts of Orange juice, and 1 part of Grape juice. The total volume is 60 ml.
-# The second container contains 1 part of Apple juice, 3 parts of Orange juice, and 2 parts of Grape juice. The total volume is 50 ml.
-# The third container contains 2 parts of Apple juice, 1 part of Orange juice, and 2 parts of Grape juice. The total volume is 40 ml.
+# First container contains: 3 parts of Apple, 2 parts of Orange, and 1 part of Grape. The total volume is 60 ml.
+# Second container contains: 1 part of Apple, 3 parts of Orange, and 2 parts of Grape. The total volume is 50 ml.
+# Third container contains: 2 parts of Apple, 1 part of Orange, and 2 parts of Grape. The total volume is 40 ml.
 
 # This will be needed when creating matrices for X,Y,Z with the constants
 from copy import deepcopy
@@ -30,6 +30,7 @@ determinant = (a1 * b2 * c3) - (a1 * c2 * b3) + (b1 * c2 * a3) - \
 
 # Create deepcopies for the matrices to construct new compound object
 # This is slower than a shallow copy, however necessary here, as the matrices need to be created uniquely
+# Matrix X corresponds to Apple, Matrix Y corresponds to Orange and Matrix Z corresponds to Grape
 matrixX = deepcopy(matrix)
 matrixY = deepcopy(matrix)
 matrixZ = deepcopy(matrix)
