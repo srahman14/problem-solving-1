@@ -16,6 +16,8 @@ from copy import deepcopy
 matrix = [[3, 2, 1],
           [1, 3, 2],
           [2, 1, 2]]
+
+
 # Constants -> known values for the container (ml)
 constants = [60, 50, 40]
 
@@ -34,6 +36,7 @@ determinant = (a1 * b2 * c3) - (a1 * c2 * b3) + (b1 * c2 * a3) - \
 matrixX = deepcopy(matrix)
 matrixY = deepcopy(matrix)
 matrixZ = deepcopy(matrix)
+
 
 # Input the values of the constants in the corresponding matrices, X, Y, Z
 matrixX[0][0],  matrixX[1][0],  matrixX[2][0] = constants[0], constants[1], constants[2]
@@ -62,6 +65,7 @@ determinantY = (a1 * b2 * c3) - (a1 * c2 * b3) + (b1 * c2 * a3) - \
 a1, b1, c1 = matrixZ[0][0], matrixZ[0][1], matrixZ[0][2]
 a2, b2, c2 = matrixZ[1][0], matrixZ[1][1], matrixZ[1][2]
 a3, b3, c3 = matrixZ[2][0], matrixZ[2][1], matrixZ[2][2]
+
 
 # Use the same formula to solve for the determinat of Y
 determinantZ = (a1 * b2 * c3) - (a1 * c2 * b3) + (b1 * c2 * a3) - \
