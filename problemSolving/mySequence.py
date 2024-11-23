@@ -27,23 +27,29 @@ while count < n:
     length_sequence = len(sequence) - 1
     # If the last digits of both two numbers are the same
     if str(sequence[length_sequence - 1])[-1:] == str(sequence[length_sequence])[-1:]:
-
-        num1_str = str(sequence[length_sequence])
-        result = sequence[length_sequence - 1] * len(num1_str)
+        # Assign the second-to-last number as a string
+        num1_str = str(sequence[length_sequence - 1])
+        # Multiply the most recent number with the length of digits of the second to last number
+        result = sequence[length_sequence] * len(num1_str)
         sequence.append(result)
         count += 1
     # Check if the most recent number has odd number of digits
     # if the length of the digits is not even of the newest number is not even
     elif len(str(sequence[length_sequence])) % 2 != 0:
+        # Break the digits down of the second-to-last number using a for loop and place them into a list
         num2_list_digits = [int(digit)
                             for digit in str(sequence[length_sequence - 1])]
+        # Add the sum of list sqaured to the most recent numebr
         result = sequence[length_sequence] + (sum(num2_list_digits) ** 2)
         sequence.append(result)
         count += 1
     # If none of the previous 2 rules are met
     else:
+        # Assign the first number as the second-to-last number
+        # Assign the second number as the most recent number
         num1 = sequence[length_sequence - 1]
         num2 = sequence[length_sequence]
+        # Return the sum of the two numbers and multiply by 2
         result = (num1 + num2) * 2
         sequence.append(result)
         count += 1

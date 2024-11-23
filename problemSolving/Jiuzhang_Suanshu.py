@@ -58,7 +58,7 @@ a3, b3, c3 = matrixY[2][0], matrixY[2][1], matrixY[2][2]
 determinantY = (a1 * b2 * c3) - (a1 * c2 * b3) + (b1 * c2 * a3) - \
     (b1 * a2 * c3) + (c1 * a2 * b3) - (c1 * b2 * a3)
 
-# Once again use a1,b1,c1...c3 to match to every value in the matrix of Y
+# Once again use a1,b1,c1...c3 to match to every value in the matrix of Z
 a1, b1, c1 = matrixZ[0][0], matrixZ[0][1], matrixZ[0][2]
 a2, b2, c2 = matrixZ[1][0], matrixZ[1][1], matrixZ[1][2]
 a3, b3, c3 = matrixZ[2][0], matrixZ[2][1], matrixZ[2][2]
