@@ -3,11 +3,10 @@ num1 = 17
 num2 = 25
 
 # Growth rules
-# Rule 1: If both numbers end with the same digit,
-# from the second-to-last number.
+# Rule 1: If both numbers end with the same digit
 # multiply the number of digits in the second-to-last number to the most recent number.
-# Rule 2: If the last number has an odd number of digits, add the square of the sum of its digits
-# from the second-to-last number.
+# Rule 2: If the last number has an odd number of digits, add the square of
+# the sum of the second to last number to the last number
 # Rule 3: If none of these conditions are met, then multiply the sum of the two numbers by 2
 
 
@@ -24,7 +23,9 @@ n = 8
 while count < n:
     # Important to include this inside the while loop so it continues to update as the sequence
     # grows
+
     length_sequence = len(sequence) - 1
+
     # If the last digits of both two numbers are the same
     if str(sequence[length_sequence - 1])[-1:] == str(sequence[length_sequence])[-1:]:
         # Assign the second-to-last number as a string
@@ -33,8 +34,7 @@ while count < n:
         result = sequence[length_sequence] * len(num1_str)
         sequence.append(result)
         count += 1
-    # Check if the most recent number has odd number of digits
-    # if the length of the digits is not even of the newest number is not even
+    # Check if the last number has odd number of digits
     elif len(str(sequence[length_sequence])) % 2 != 0:
         # Break the digits down of the second-to-last number using a for loop and place them into a list
         num2_list_digits = [int(digit)
@@ -43,10 +43,10 @@ while count < n:
         result = sequence[length_sequence] + (sum(num2_list_digits) ** 2)
         sequence.append(result)
         count += 1
-    # If none of the previous 2 rules are met
+    # If none of the previous 2 rules are met, then 3rd rule applies
     else:
-        # Assign the first number as the second-to-last number
-        # Assign the second number as the most recent number
+        # Assign the first number as the second-to-last number as num1
+        # Assign the second number as the most recent number as num2
         num1 = sequence[length_sequence - 1]
         num2 = sequence[length_sequence]
         # Return the sum of the two numbers and multiply by 2
